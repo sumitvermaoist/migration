@@ -13,3 +13,9 @@ VALUES
 ('alex.jones@example.com', 'Alex', 'Jones', 'qwerty789', 24),
 ('maria.lee@example.com', 'Maria', 'Lee', 'welcome2025', 29),
 ('rohan.kapoor@example.com', 'Rohan', 'Kapoor', 'india123', 35);
+
+CREATE TABLE hram_fulcom (
+account_no    VARCHAR(50),
+api_status    CHAR(1),
+updated_by    VARCHAR(100),updated_time  TIMESTAMP
+);
