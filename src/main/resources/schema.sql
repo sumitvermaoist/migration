@@ -31,3 +31,22 @@ VALUES ('ACC1003', 'S', 'batch_job', TIMESTAMP '2025-08-20 18:30:00');
 
 INSERT INTO hram_fulcom (account_no, api_status, updated_by, updated_time)
 VALUES ('ACC1004', 'P', 'user1', TIMESTAMP '2025-08-19 09:00:00');
+CREATE TABLE CD_HRAM_FULCOM (
+    WFB_ACCT_ID            BIGINT PRIMARY KEY,
+    CHD_FULL_ACCT_NO_CHD_SYSTEM_NO VARCHAR(50),
+    CRN                    VARCHAR(50),
+    CHD_FULL_ACCT_NO_CHD_PRIN_BANK VARCHAR(50),
+    CHD_EXTERNAL_STATUS    VARCHAR(20),
+    CHD_CURRENT_BALANCE    DECIMAL(15,2),
+    CHD_ADDR_LINE_2        VARCHAR(100),
+    CHD_CITY               VARCHAR(50),
+    CHD_ZIP_CODE           VARCHAR(10),
+    CHD_STATE              VARCHAR(50),
+    CHD_CREDIT_LINE        DECIMAL(15,2),
+    CHD_CR_LINE_DATE       DATE,
+    CHD_CLIENT_NUMBER      VARCHAR(50),
+    CHD_UD_PRODUCT_TYPE    VARCHAR(50),
+    STATUS                 CHAR(1),
+    UPDATED_BY             VARCHAR(50),
+    UPDATED_TIME           TIMESTAMP
+);
