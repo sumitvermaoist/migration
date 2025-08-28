@@ -21,3 +21,10 @@ spring:
     console:
       enabled: true
       path: /h2-console
+
+logging:
+  level:
+    reactor:
+      netty:
+        http:
+          client: DEBUG
