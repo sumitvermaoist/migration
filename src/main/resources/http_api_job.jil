@@ -1,0 +1,28 @@
+insert_job: depct_api_trigger_http_job
+job_type: http
+machine: sds-p-uty-t01.ent.wfb.bank.corp
+owner: depctuser
+application: DEPCT
+description: "Trigger DEPCT API endpoint and log the response"
+alarm_if_fail: y
+alarm_if_terminated: y
+n_retrys: 2
+avg_runtime: 10
+date_conditions: y
+timezone: US/Eastern
+days_of_week: mo,tu,we,th,fr
+start_times: "21:30"
+
+# HTTP-specific fields
+invocation_type: GET
+provider_url: "https://cd-data-processor-depct-dev.apps.str17.ocp.nonprod.wellsfargo.net/api/jobs/schram"
+http_headers: "X-APPCERT:depct,66:89:6e:08:00:00:00:0a:cf,2606182154377;wf.senderHostName:localhost;wf.senderApplicationId:DEPCT;X-REQUEST-ID:40acf7da-0b5c-11e7-93ae-92361f002671;X-WF-CLIENT-ID:ORCHEST1;X-WF-CMP-ID:depct;X-WF-API-VERSION:0.0.1;Content-Type:application/json;X-WF-ORIG-CLIENT-ID:depct;X-WF-RELATION-ID:fb7b7b85-48f1-4fd1-936c-57a1474f4ea3;X-WF-HOST:cd.wellsfargo.com;X-WF-INITIATOR-ID:depct;X-WF-ORIG-SUB-CLIENT-ID:depct;Authorization:Bearer eyJraWQiOiJvcmNoZXN0ZWQtG1bvm5LWTpzc5nFCligxbjZ5vIiBITMjUzQlI0N...;Cookie:e34656ccee2eca3e9572df0db814f013"
+http_response_timeout: 600
+http_success_codes: 200-299
+
+std_out_file: /logs/depct_api_trigger_http_job.out
+std_err_file: /logs/depct_api_trigger_http_job.err
+
+notification_emailaddress: depctJobAlerts@wellsfargo.com
+notification_msg: "DEPCT API HTTP job failed. Check error log for details."
+send_notification: f
