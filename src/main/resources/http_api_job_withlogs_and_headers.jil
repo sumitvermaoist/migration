@@ -19,8 +19,14 @@ notification_emailaddress: BACShoppingAutosysJobFailureNotifications@wellsfargo.
 # HTTP-specific fields
 invocation_type: GET
 provider_url: "https://cd-data-processor-depct-dev.apps.str17.ocp.nonprod.wellsfargo.net/api/jobs/schram"
+#http_headers: "X-APPCERT:depct,66:89:6e:08:00:00:00:0a:cf,2606182154377;wf.senderHostName:localhost;wf.senderApplicationId:DEPCT;X-REQUEST-
+#ID:40acf7da-0b5c-11e7-93ae-92361f002671;X-WF-CLIENT-ID:ORCHEST1;X-WF-CMP-ID:depct;X-WF-API-VERSION:0.0.1;Content-Type:application/json;X-WF-ORIG-CLIENT-
+#ID:depct;X-WF-RELATION-ID:fb7b7b85-48f1-4fd1-936c-57a1474f4ea3;X-WF-HOST:cd.wellsfargo.com;X-WF-INITIATOR-ID:depct;X-WF-ORIG-SUB-CLIENT-
+#ID:depct;Authorization:Bearer eyJraWQiOiJvcmNoZXN0ZWQtG1bvm5LWTpzc5nFCligxbjZ5vIiBITMjUzQlI0N...;Cookie:e34656ccee2eca3e9572df0db814f013"
 http_response_timeout: 600
 http_success_codes: 200-299
 compatibility: 11
 j2ee_no_global_proxy_defaults: y
 j2ee_proxy_port: 80
+#std_out_file: /logs/depct_api_trigger_http_job.out
+#std_err_file: /logs/depct_api_trigger_http_job.err
